@@ -9,7 +9,7 @@ with open('LICENSE') as f:
 
 setup(
   name='ticktock',
-  version='1.0.0',
+  version='1.1.0',
   description='Useful timer-related utilities',
   long_description=readme,
   author='Tianhui Michael Li',
