@@ -11,12 +11,12 @@ from ticktock import delay
 class TestDelay(unittest.TestCase):
   def test_delay(self):
     buffer = StringIO()
-    delay(5,2,out=buffer)
+    delay(5, 2, out=buffer, string="xyz")
     results = buffer.getvalue()
-    assert "Delaying 5.0 seconds" in results
-    assert "Delaying 4.0 seconds" in results
-    assert "Delaying 2.0 seconds" in results
-    assert "Finished waiting" in results
+    assert "Delaying xyz for 5.0 seconds" in results
+    assert "Delaying xyz for 4.0 seconds" in results
+    assert "Delaying xyz for 2.0 seconds" in results
+    assert "Finished waiting for xyz at" in results
 
 if __name__ == '__main__':
   unittest.main()
